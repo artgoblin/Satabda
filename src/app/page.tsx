@@ -2,8 +2,10 @@
 import { useState, useEffect } from "react";
 import Bubble from "../app/components/Bubble";
 import Navbar from "../app/components/Navbar";
+import { ParallaxProvider } from "react-scroll-parallax";
 import LandingPanel from "../app/components/LandingPanel";
 import About from "../app/components/About";
+import Projects from "../app/components/Projects";
 import SectionWrapper from "../app/SectionWrapper";
 
 export default function Home() {
@@ -39,7 +41,7 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <ParallaxProvider>
       {/* Bubbles container that spans the entire page */}
       <div className="fixed top-0 left-0 w-full h-full  bg-black overflow-hidden pointer-events-none z-0">
         {bubbles.map((bubble) => (
@@ -59,10 +61,15 @@ export default function Home() {
         <SectionWrapper id="home">
           <LandingPanel />
         </SectionWrapper>
-        <SectionWrapper id="about">
-          <About />
-        </SectionWrapper>
+        <div className="backdrop-blur-[8px]">
+          <SectionWrapper id="about">
+            <About />
+          </SectionWrapper>
+          <SectionWrapper id="works">
+            <Projects />
+          </SectionWrapper>
+        </div>
       </div>
-    </>
+    </ParallaxProvider>
   );
 }

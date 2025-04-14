@@ -1,31 +1,8 @@
 @import "tailwindcss";
 @import "tailwindcss";
 
-
-
 .custom-background {
   background: black;
   background-size: cover;
   background-position: center;
 }
-
-
-@keyframes lava {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.3;
-  }
-  50% {
-    transform: translateY(-50px) scale(1.2);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(-100px) scale(1);
-    opacity: 0.3;
-  }
-}
-
-.animate-lava {
-  animation: lava infinite ease-in-out;
-}
-

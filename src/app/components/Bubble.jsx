@@ -1,5 +1,6 @@
 
 import { motion, useAnimation } from "framer-motion";
+import "../../app/globals.css";
 
 
 const Bubble = ({ size, left, duration, delay }) => {
