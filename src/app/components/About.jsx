@@ -1,17 +1,13 @@
-import { Parallax } from "react-scroll-parallax";
 import "../../../src/app/globals.css";
 
 function About() {
   return (
     <div className="flex flex-col items-center min-h-screen py-20 px-4">
       <div className="w-full max-w-4xl">
-        <Parallax translateX={[10, -10]} opacity={[0, 1]}>
-          <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 mb-10">
+          <h1 className="text-5xl font-extrabold text-transparent bg-clip-text mixing bg-gradient-to-r from-blue-500 to-green-500 mb-10">
             About Me
           </h1>
-        </Parallax>
         
-        <Parallax translateX={[-10, 10]} opacity={[0, 2]}>
           <div className="text-white text-lg leading-loose space-y-6 p-8">
             <p>
               I'm a passionate Full-Stack Developer with a love for building
@@ -29,7 +25,6 @@ function About() {
               guesswork.
             </p>
           </div>
-        </Parallax>
       </div>
     </div>
   );

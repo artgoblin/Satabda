@@ -10,7 +10,7 @@ const LandingPanel = () => {
   ];
 
   const handleViewButtonClick = () => {
-    const section = document.getElementById("about");
+    const section = document.getElementById("works");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }

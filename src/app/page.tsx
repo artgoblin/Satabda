@@ -5,10 +5,11 @@ import Navbar from "../app/components/Navbar";
 import { ParallaxProvider } from "react-scroll-parallax";
 import LandingPanel from "../app/components/LandingPanel";
 import About from "../app/components/About";
+import Theme from "../app/components/Theme";
 import Projects from "../app/components/Projects";
 import SectionWrapper from "../app/SectionWrapper";
-
 export default function Home() {
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [bubbles, setBubbles] = useState<
     {
       id: number;
@@ -39,11 +40,17 @@ export default function Home() {
 
     return () => window.removeEventListener("resize", generateBubbles);
   }, []);
-
+  const HandleThemeChange = () => {
+    setIsDarkMode(!isDarkMode);
+  };
   return (
     <ParallaxProvider>
       {/* Bubbles container that spans the entire page */}
-      <div className="fixed top-0 left-0 w-full h-full  bg-black overflow-hidden pointer-events-none z-0">
+      <div
+        className={`fixed top-0 left-0 w-full h-full  
+      ${isDarkMode ? "bg-black" : "bg-white"}
+      overflow-hidden pointer-events-none z-0`}
+      >
         {bubbles.map((bubble) => (
           <Bubble
             key={bubble.id}
@@ -69,6 +76,7 @@ export default function Home() {
             <Projects />
           </SectionWrapper>
         </div>
+        <Theme HandleThemeChange={HandleThemeChange} isDarkMode={isDarkMode} />
       </div>
     </ParallaxProvider>
   );

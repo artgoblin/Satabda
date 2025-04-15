@@ -6,3 +6,14 @@
   background-size: cover;
   background-position: center;
 }
+
+@keyframes bounceanimation {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+  
+}
+
+.mixing {
+  animation: bounceanimation 3.5s ease-in-out infinite;
+}

@@ -1,32 +1,121 @@
 import { Parallax } from "react-scroll-parallax";
-
+import { FaJava, FaPython, FaReact } from "react-icons/fa6";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { SiSpringboot, SiTwilio, SiMysql, SiFlask } from "react-icons/si";
+import "../../../src/app/globals.css";
 const Projects = () => {
+  const projects = [
+    {
+      title: "Restaurant Management System",
+      tag: "Full-stack App",
+      description:
+        "Developed a web-based system to streamline restaurant operations, reducing order processing time by 30%. Integrated user-friendly interfaces with robust backend services, ensuring seamless user experience and reliable data handling.",
+      technologies: [SiSpringboot, FaReact, SiMysql],
+      colorFrom: "from-blue-900/50",
+      colorTo: "to-emerald-900/50",
+      align: "left",
+      link: "https://github.com/artgoblin/restaurant_managment_system_front_end",
+    },
+    {
+      title: "WhatsApp Bot",
+      tag: "Automation Tool",
+      description:
+        "Created a bot to provide COVID-19 information and entertainment features, increasing user engagement by 40%. Enhanced user engagement by incorporating interactive elements like trivia, jokes, and memes.",
+      technologies: [FaPython, SiFlask, SiTwilio],
+      colorFrom: "from-purple-900/50",
+      colorTo: "to-red-900/50",
+      align: "right",
+      link: "https://github.com/artgoblin/botwhatsapp",
+    },
+    {
+        title: "Blogging Platform",
+        tag: "Full-stack App",
+        description:
+          "A responsive blogging platform where users can register, login, and share their thoughts and feelings. Implemented secure authentication and cloud-based media storage for seamless content sharing.",
+        technologies: [FaJava, SiSpringboot, FaReact, BiLogoPostgresql],
+        colorFrom: "from-yellow-900/50",
+        colorTo: "to-pink-900/50",
+        align: "left",
+        link: "https://github.com/artgoblin/blogging_site"
+      },
+      {
+        title: "AI Powered Music Player",
+        tag: "Desktop Application",
+        description:
+          "Developed a desktop application that uses AI voice assisted playback system which helps to play music based on user preferences, enhancing the music discovery experience.",  
+        technologies: [ FaPython],
+        colorFrom: "from-green-900/50",
+        colorTo: "to-blue-900/50",
+        align: "right",
+        link: "https://github.com/artgoblin/Voice-assisted-emotion-based-musicplayer"
+      },
+
+  ];
+
   return (
-    <section className="py-32 bg-transparent text-white">
+    <>
       <div className="container mx-auto px-6">
-        <Parallax translateY={[-50, 50]} opacity={[0.5, 1]}>
-          <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 mb-10">
+        <div className="space-y-16">
+          <h1 className="text-5xl font-extrabold text-transparent mixing bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 mb-10 py-8">
             Projects
           </h1>
-        </Parallax>
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className={`flex ${
+                project.align === "right" ? "justify-end" : "justify-start"
+              }`}
+            >
+              <Parallax
+                translateX={project.align === "right" ? [25, -5] : [-5, 25]}
+                scale={[1, 1.05]}
+                className="w-full"
+              >
+                <div
+                  className={`bg-gradient-to-br ${project.colorFrom} ${project.colorTo} p-8 rounded-xl border border-white/10 w-full max-w-4xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl`}
+                >
+                  <div className="flex justify-between items-start mb-6">
+                    <h3 className="text-3xl font-bold">{project.title}</h3>
+                    <span className="bg-black/30 px-3 py-1 rounded-full text-sm">
+                      {project.tag}
+                    </span>
+                  </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <Parallax translateY={[-30, 30]}>
-            <div className="bg-white/10 p-6 rounded-xl shadow-xl hover:scale-105 transition">
-              <h3 className="text-2xl font-semibold mb-4">Project One</h3>
-              <p>Full-stack app using Java and Spring Boot.</p>
-            </div>
-          </Parallax>
+                  <p
+                    className={`flex ${
+                      project.align === "right" ? "items-end" : "items-start"
+                    }`}
+                  >
+                    {project.description}
+                  </p>
+                  <div className={"flex justify-center mt-8"}>
+                    {project.technologies.map((tech, id) => {
+                      const Icon = tech;
 
-          <Parallax translateY={[20, -20]}>
-            <div className="bg-white/10 p-6 rounded-xl shadow-xl hover:scale-105 transition">
-              <h3 className="text-2xl font-semibold mb-4">Project Two</h3>
-              <p>Interactive UI with React and animations.</p>
+                      return (
+                        <Icon
+                          key={id}
+                          className="text-4xl mx-2 text-white hover:text-blue-500 transition-colors duration-300"
+                        />
+                      );
+                    })}
+                  </div>
+
+                  <div className="flex justify-center mt-8 gap-4">
+                    <a
+                      href={project.link}
+                      className="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-400 transition"
+                    >
+                      Git Hub
+                    </a>
+                  </div>
+                </div>
+              </Parallax>
             </div>
-          </Parallax>
+          ))}
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
