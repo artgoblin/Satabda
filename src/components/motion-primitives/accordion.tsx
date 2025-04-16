@@ -113,9 +113,9 @@ function AccordionItem({ value, children, className }: AccordionItemProps) {
       {...(isExpanded ? { 'data-expanded': '' } : {'data-closed': ''})}
     >
       {React.Children.map(children, (child) => {
-        if (React.isValidElement(child)) {
+        if (React.isValidElement<{ value?: React.Key; expanded?: boolean }>(child)) {
           return React.cloneElement(child, {
-            ...child.props,
+            ...(typeof child.props === 'object' ? child.props : {}),
             value,
             expanded: isExpanded,
           });
