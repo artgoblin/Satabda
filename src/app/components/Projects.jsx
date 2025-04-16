@@ -28,35 +28,34 @@ const Projects = () => {
       link: "https://github.com/artgoblin/botwhatsapp",
     },
     {
-        title: "Blogging Platform",
-        tag: "Full-stack App",
-        description:
-          "A responsive blogging platform where users can register, login, and share their thoughts and feelings. Implemented secure authentication and cloud-based media storage for seamless content sharing.",
-        technologies: [FaJava, SiSpringboot, FaReact, BiLogoPostgresql],
-        colorFrom: "from-yellow-900/50",
-        colorTo: "to-pink-900/50",
-        align: "left",
-        link: "https://github.com/artgoblin/blogging_site"
-      },
-      {
-        title: "AI Powered Music Player",
-        tag: "Desktop Application",
-        description:
-          "Developed a desktop application that uses AI voice assisted playback system which helps to play music based on user preferences, enhancing the music discovery experience.",  
-        technologies: [ FaPython],
-        colorFrom: "from-green-900/50",
-        colorTo: "to-blue-900/50",
-        align: "right",
-        link: "https://github.com/artgoblin/Voice-assisted-emotion-based-musicplayer"
-      },
-
+      title: "Blogging Platform",
+      tag: "Full-stack App",
+      description:
+        "A responsive blogging platform where users can register, login, and share their thoughts and feelings. Implemented secure authentication and cloud-based media storage for seamless content sharing.",
+      technologies: [FaJava, SiSpringboot, FaReact, BiLogoPostgresql],
+      colorFrom: "from-yellow-900/50",
+      colorTo: "to-pink-900/50",
+      align: "left",
+      link: "https://github.com/artgoblin/blogging_site",
+    },
+    {
+      title: "AI Powered Music Player",
+      tag: "Desktop Application",
+      description:
+        "Developed a desktop application that uses AI voice assisted playback system which helps to play music based on user preferences, enhancing the music discovery experience.",
+      technologies: [FaPython],
+      colorFrom: "from-green-900/50",
+      colorTo: "to-blue-900/50",
+      align: "right",
+      link: "https://github.com/artgoblin/Voice-assisted-emotion-based-musicplayer",
+    },
   ];
 
   return (
     <>
       <div className="container mx-auto px-6">
         <div className="space-y-16">
-          <h1 className="text-5xl font-extrabold text-transparent mixing bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 mb-10 py-8">
+          <h1 className="text-5xl font-extrabold text-transparent mixing bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 mb-1 py-15">
             Projects
           </h1>
           {projects.map((project, index) => (
@@ -104,6 +103,8 @@ const Projects = () => {
                   <div className="flex justify-center mt-8 gap-4">
                     <a
                       href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-400 transition"
                     >
                       Git Hub

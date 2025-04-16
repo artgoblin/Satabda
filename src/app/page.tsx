@@ -7,6 +7,7 @@ import LandingPanel from "../app/components/LandingPanel";
 import About from "../app/components/About";
 import Theme from "../app/components/Theme";
 import Projects from "../app/components/Projects";
+import Experience from "../app/components/Experience";
 import SectionWrapper from "../app/SectionWrapper";
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -74,6 +75,9 @@ export default function Home() {
           </SectionWrapper>
           <SectionWrapper id="works">
             <Projects />
+          </SectionWrapper>
+          <SectionWrapper id="experience">
+            <Experience />
           </SectionWrapper>
         </div>
         <Theme HandleThemeChange={HandleThemeChange} isDarkMode={isDarkMode} />
