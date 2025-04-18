@@ -8,7 +8,9 @@ import About from "../app/components/About";
 import Theme from "../app/components/Theme";
 import Projects from "../app/components/Projects";
 import Experience from "../app/components/Experience";
+import Footer from "../app/components/Footer";
 import SectionWrapper from "../app/SectionWrapper";
+import React from "react";
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [bubbles, setBubbles] = useState<
@@ -79,6 +81,7 @@ export default function Home() {
           <SectionWrapper id="experience">
             <Experience />
           </SectionWrapper>
+        <Footer />
         </div>
         <Theme HandleThemeChange={HandleThemeChange} isDarkMode={isDarkMode} />
       </div>

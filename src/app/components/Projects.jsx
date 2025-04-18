@@ -1,7 +1,10 @@
 import { Parallax } from "react-scroll-parallax";
 import { FaJava, FaPython, FaReact } from "react-icons/fa6";
+import { FaGitSquare } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiSpringboot, SiTwilio, SiMysql, SiFlask } from "react-icons/si";
+import Skills from "./Skills";
+import { FaGithub } from "react-icons/fa";
 import "../../../src/app/globals.css";
 const Projects = () => {
   const projects = [
@@ -10,7 +13,7 @@ const Projects = () => {
       tag: "Full-stack App",
       description:
         "Developed a web-based system to streamline restaurant operations, reducing order processing time by 30%. Integrated user-friendly interfaces with robust backend services, ensuring seamless user experience and reliable data handling.",
-      technologies: [SiSpringboot, FaReact, SiMysql],
+      technologies: [SiSpringboot, FaReact, SiMysql, FaGitSquare],
       colorFrom: "from-blue-900/50",
       colorTo: "to-emerald-900/50",
       align: "left",
@@ -21,7 +24,7 @@ const Projects = () => {
       tag: "Automation Tool",
       description:
         "Created a bot to provide COVID-19 information and entertainment features, increasing user engagement by 40%. Enhanced user engagement by incorporating interactive elements like trivia, jokes, and memes.",
-      technologies: [FaPython, SiFlask, SiTwilio],
+      technologies: [FaPython, SiFlask, SiTwilio, FaGitSquare],
       colorFrom: "from-purple-900/50",
       colorTo: "to-red-900/50",
       align: "right",
@@ -32,7 +35,13 @@ const Projects = () => {
       tag: "Full-stack App",
       description:
         "A responsive blogging platform where users can register, login, and share their thoughts and feelings. Implemented secure authentication and cloud-based media storage for seamless content sharing.",
-      technologies: [FaJava, SiSpringboot, FaReact, BiLogoPostgresql],
+      technologies: [
+        FaJava,
+        SiSpringboot,
+        FaReact,
+        BiLogoPostgresql,
+        FaGitSquare,
+      ],
       colorFrom: "from-yellow-900/50",
       colorTo: "to-pink-900/50",
       align: "left",
@@ -43,7 +52,7 @@ const Projects = () => {
       tag: "Desktop Application",
       description:
         "Developed a desktop application that uses AI voice assisted playback system which helps to play music based on user preferences, enhancing the music discovery experience.",
-      technologies: [FaPython],
+      technologies: [FaPython, FaGitSquare],
       colorFrom: "from-green-900/50",
       colorTo: "to-blue-900/50",
       align: "right",
@@ -71,7 +80,7 @@ const Projects = () => {
                 className="w-full"
               >
                 <div
-                  className={`bg-gradient-to-br ${project.colorFrom} ${project.colorTo} p-8 rounded-xl border border-white/10 w-full max-w-4xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl`}
+                  className={`bg-gradient-to-br ${project.colorFrom} ${project.colorTo} p-8 rounded-xl border border-white/10 w-full max-w-4xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl curtain`}
                 >
                   <div className="flex justify-between items-start mb-6">
                     <h3 className="text-3xl font-bold">{project.title}</h3>
@@ -115,6 +124,18 @@ const Projects = () => {
             </div>
           ))}
         </div>
+        <div className="justify-center flex">
+          <a
+            className="p-4 mt-16 bg-gradient-to-r from-blue-200/60 to-green-200/60 text-white-800 hover:scale-[1.05] rounded-full font-medium hover:bg-blue-900 transition-all hover:text-black transition duration-300 flex items-center gap-2"
+            href={"https://github.com/artgoblin"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+            <span>Learn More</span>
+          </a>
+        </div>
+          <Skills />
       </div>
     </>
   );
