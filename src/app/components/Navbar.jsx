@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="flex items-center w-full fixed top-0 left-0 z-50 bg-black/5 backdrop-blur-md px-4 py-2">
         <AnimatedBackground
           defaultValue={TABS[0]}
-          className="rounded-lg bg-zinc-300 dark:bg-zinc-800"
+          className="rounded-lg bg-zinc-300 dark:bg-zinc-800/50"
           transition={{
             type: "spring",
             bounce: 0.2,
@@ -33,7 +33,7 @@ const Navbar = () => {
               key={index}
               data-id={tab}
               type="button"
-              className={`px-2 text-sm md:px-8 md:py-4 md:text-base ${isDarkMode ? "text-zinc-400" : "text-zinc-800"} transition-colors duration-300 hover:text-zinc-950 dark:hover:text-zinc-50`}
+              className={`px-2 text-sm md:px-8 md:py-4 md:text-base ${isDarkMode ? "text-zinc-400" : "text-zinc-700"} transition-colors duration-300 hover:text-zinc-50`}
               onClick={() => handleNavClick(tab)}
             >
               {tab}
