@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Bubble from "../app/components/Bubble";
+import { useRef } from "react";
 import Navbar from "../app/components/Navbar";
-import { ParallaxProvider } from "react-scroll-parallax";
 import LandingPanel from "../app/components/LandingPanel";
 import About from "../app/components/About";
 import Theme from "../app/components/Theme";
@@ -10,9 +10,17 @@ import Projects from "../app/components/Projects";
 import Experience from "../app/components/Experience";
 import Footer from "../app/components/Footer";
 import SectionWrapper from "../app/SectionWrapper";
+import ContactForm from "../app/components/ContactForm";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { openModal, closeModal } from "./store/modalSlice";
+import { RootState } from "./store/store";
+
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const open = useSelector((state: RootState) => state.modal.open);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const dispatch = useDispatch();
   const [bubbles, setBubbles] = useState<
     {
       id: number;
@@ -22,6 +30,12 @@ export default function Home() {
       delay: number;
     }[]
   >([]);
+
+  const handleOutsideClick = (event: React.MouseEvent) => {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      dispatch(closeModal());
+    }
+  };
 
   useEffect(() => {
     const generateBubbles = () => {
@@ -47,8 +61,7 @@ export default function Home() {
     setIsDarkMode(!isDarkMode);
   };
   return (
-    <ParallaxProvider>
-      {/* Bubbles container that spans the entire page */}
+    <>
       <div
         className={`fixed top-0 left-0 w-full h-full  
       ${isDarkMode ? "bg-black" : "bg-white"}
@@ -81,10 +94,23 @@ export default function Home() {
           <SectionWrapper id="experience">
             <Experience />
           </SectionWrapper>
-        <Footer />
+          <Footer />
         </div>
         <Theme HandleThemeChange={HandleThemeChange} isDarkMode={isDarkMode} />
+        {open && (
+          <div
+            className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50"
+            onClick={handleOutsideClick}
+          >
+            <div
+              ref={modalRef}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <ContactForm />
+            </div>
+          </div>
+        )}
       </div>
-    </ParallaxProvider>
+    </>
   );
 }

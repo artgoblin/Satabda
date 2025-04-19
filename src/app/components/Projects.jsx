@@ -100,12 +100,12 @@ const Projects = () => {
                     {project.technologies.map((tech, id) => {
                       const Icon = tech;
 
-                      return (
+                        return (
                         <Icon
                           key={id}
-                          className="text-4xl mx-2 text-white hover:text-blue-500 transition-colors duration-300"
+                          className="text-4xl mx-2 text-white hover:text-purple-500 transition-colors duration-300"
                         />
-                      );
+                        );
                     })}
                   </div>
 
@@ -126,7 +126,7 @@ const Projects = () => {
         </div>
         <div className="justify-center flex">
           <a
-            className="p-4 mt-16 bg-gradient-to-r from-blue-200/60 to-green-200/60 text-white-800 hover:scale-[1.05] rounded-full font-medium hover:bg-blue-900 transition-all hover:text-black transition duration-300 flex items-center gap-2"
+            className="p-4 mt-16 bg-gradient-to-r from-blue-500/80 to-green-500/80 text-white-800 hover:scale-[1.05] rounded-full font-medium hover:bg-blue-900 transition-all hover:text-black transition duration-300 flex items-center gap-2"
             href={"https://github.com/artgoblin"}
             target="_blank"
             rel="noopener noreferrer"

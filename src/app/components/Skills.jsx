@@ -21,12 +21,12 @@ import {
 } from "react-icons/si";
 import { GrGraphQl } from "react-icons/gr";
 import { TbBrandCpp } from "react-icons/tb";
+import "../../app/globals.css";
 
 const Skills = () => {
   return (
-    <InfiniteSlider speedOnHover={20} gap={24}>
-      <div className="mt-16">
-        <div className="flex flex-wrap justify-center items-center gap-6 px-4">
+    <InfiniteSlider speedOnHover={60} gap={24}
+    className="mt-35">
           <FaReact
             className="text-5xl text-cyan-400 hover:scale-110 transition"
             title="React"
@@ -95,8 +95,6 @@ const Skills = () => {
             className="text-5xl text-[#e34f26] hover:scale-110 transition"
             title="HTML5"
           />
-        </div>
-      </div>
     </InfiniteSlider>
   );
 };

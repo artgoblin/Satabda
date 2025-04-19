@@ -5,21 +5,26 @@ import { FaInstagramSquare, FaFacebookF } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
 import { TbBrandLeetcode } from "react-icons/tb";
+import ContactForm from "./ContactForm";
+import { openModal, closeModal } from '../store/modalSlice';
+import { useDispatch, useSelector } from "react-redux";
 
-// SocialLink Component
+
 const SocialLink = ({ href, Icon }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="hover:text-blue-300"
+    className="hover:text-blue-300 hover:scale-110 transition duration-300"
   >
     <Icon />
   </a>
 );
 
 const Footer = () => {
-  const [fact, setFact] = useState("Loading a fun fact...");
+    const open = useSelector((state) => state.modal.open);
+    const dispatch = useDispatch();
+  const [fact, setFact] = useState("");
 
   const fetchFact = async () => {
     try {
@@ -62,17 +67,21 @@ const Footer = () => {
           Icon={FaFacebookF}
         />
       </div>
-      <button className="text-sm px-4 py-2 rounded-full border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-all duration-300 mb-4">
-        Contact
+      <button
+        className="text-sm px-4 py-2 rounded-full border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-all duration-300 mb-4"
+        onClick={() => dispatch(openModal())}
+      >
+        Contact Me
       </button>
-      <p className="text-1xl text-red-300/60"><strong>Factinator:</strong></p>
+      <p className="text-1xl text-red-300/60">
+        <strong>Factinator:</strong>
+      </p>
       <div
         className="flex justify-center items-center p-10"
         style={{ maxHeight: "100px", overflowY: "hidden" }}
       >
         <p className="text-lg italic mt-2 text-purple-300">{fact}</p>
       </div>
-
       <button
         onClick={fetchFact}
         className="mt-4 text-sm px-4 py-2 rounded-full border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-all duration-300"
@@ -82,13 +91,12 @@ const Footer = () => {
           initial={{ rotate: 0 }}
           animate={{ rotate: 360 }}
           transition={{ duration: 1, ease: "linear" }}
-          className="inline-block ml-2"
+          className="inline-block ml-2 my-[-2px]"
           key={fact}
         >
           <IoMdRefreshCircle />
         </motion.div>
       </button>
-
       <p className="mt-8 text-xs text-white/40">
         &copy; 2025{" "}
         <a
