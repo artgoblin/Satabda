@@ -2,13 +2,12 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { IoMdRefreshCircle } from "react-icons/io";
 import { FaInstagramSquare, FaFacebookF } from "react-icons/fa";
+import { CiSquareChevUp } from "react-icons/ci";
 import { BsGithub } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
 import { TbBrandLeetcode } from "react-icons/tb";
-import ContactForm from "./ContactForm";
-import { openModal, closeModal } from '../store/modalSlice';
+import { openModal, closeModal } from "../store/modalSlice";
 import { useDispatch, useSelector } from "react-redux";
-
 
 const SocialLink = ({ href, Icon }) => (
   <a
@@ -22,8 +21,8 @@ const SocialLink = ({ href, Icon }) => (
 );
 
 const Footer = () => {
-    const open = useSelector((state) => state.modal.open);
-    const dispatch = useDispatch();
+  const open = useSelector((state) => state.modal.open);
+  const dispatch = useDispatch();
   const [fact, setFact] = useState("");
 
   const fetchFact = async () => {
@@ -44,72 +43,80 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer
-      id="contact"
-      className="mt-20 py-8 px-4 text-center text-white bg-black/70 backdrop-blur-md border-t border-white/10"
-    >
-      <div className="flex justify-center items-center gap-4 mb-10 text-2xl">
-        <SocialLink
-          href="https://www.instagram.com/artgoblin_3000/"
-          Icon={FaInstagramSquare}
-        />
-        <SocialLink href="https://github.com/artgoblin" Icon={BsGithub} />
-        <SocialLink
-          href="https://www.linkedin.com/in/satabda-das-29620a190/"
-          Icon={AiFillLinkedin}
-        />
-        <SocialLink
-          href="https://leetcode.com/u/artgoblin3000/"
-          Icon={TbBrandLeetcode}
-        />
-        <SocialLink
-          href="https://www.facebook.com/satabda.das.980"
-          Icon={FaFacebookF}
-        />
-      </div>
+    <>
       <button
-        className="text-sm px-4 py-2 rounded-full border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-all duration-300 mb-4"
-        onClick={() => dispatch(openModal())}
+        className="fixed bottom-20 mixing bg-purple-800 right-1/2 translate-x-1/2 mb-85 z-70 border border-red-300 text-white p-2 rounded-full text-2xl hover:bg-red-300/20 transition-colors"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
-        Contact Me
+        <CiSquareChevUp />
       </button>
-      <p className="text-1xl text-red-300/60">
-        <strong>Factinator:</strong>
-      </p>
-      <div
-        className="flex justify-center items-center p-10"
-        style={{ maxHeight: "100px", overflowY: "hidden" }}
+      <footer
+        id="contact"
+        className="mt-20 py-8 px-4 text-center text-white bg-black/70 backdrop-blur-md border-t border-white/10"
       >
-        <p className="text-lg italic mt-2 text-purple-300">{fact}</p>
-      </div>
-      <button
-        onClick={fetchFact}
-        className="mt-4 text-sm px-4 py-2 rounded-full border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-all duration-300"
-      >
-        New Fact
-        <motion.div
-          initial={{ rotate: 0 }}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 1, ease: "linear" }}
-          className="inline-block ml-2 my-[-2px]"
-          key={fact}
+        <div className="flex justify-center items-center gap-4 mb-10 text-2xl">
+          <SocialLink
+            href="https://www.instagram.com/artgoblin_3000/"
+            Icon={FaInstagramSquare}
+          />
+          <SocialLink href="https://github.com/artgoblin" Icon={BsGithub} />
+          <SocialLink
+            href="https://www.linkedin.com/in/satabda-das-29620a190/"
+            Icon={AiFillLinkedin}
+          />
+          <SocialLink
+            href="https://leetcode.com/u/artgoblin3000/"
+            Icon={TbBrandLeetcode}
+          />
+          <SocialLink
+            href="https://www.facebook.com/satabda.das.980"
+            Icon={FaFacebookF}
+          />
+        </div>
+        <button
+          className="text-sm px-4 py-2 rounded-full border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-all duration-300 mb-4"
+          onClick={() => dispatch(openModal())}
         >
-          <IoMdRefreshCircle />
-        </motion.div>
-      </button>
-      <p className="mt-8 text-xs text-white/40">
-        &copy; 2025{" "}
-        <a
-          href="https://www.instagram.com/artgoblin_3000/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline hover:text-white"
+          Contact Me
+        </button>
+        <p className="text-1xl text-red-300/60">
+          <strong>Factinator:</strong>
+        </p>
+        <div
+          className="flex justify-center items-center p-10"
+          style={{ maxHeight: "100px", overflowY: "hidden" }}
         >
-          artgoblin_3000
-        </a>
-        . All rights reserved.
-      </p>
-    </footer>
+          <p className="text-lg italic mt-2 text-purple-300">{fact}</p>
+        </div>
+        <button
+          onClick={fetchFact}
+          className="mt-4 text-sm px-4 py-2 rounded-full border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white transition-all duration-300"
+        >
+          New Fact
+          <motion.div
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, ease: "linear" }}
+            className="inline-block ml-2 my-[-2px]"
+            key={fact}
+          >
+            <IoMdRefreshCircle />
+          </motion.div>
+        </button>
+        <p className="mt-8 text-xs text-white/40">
+          &copy; 2025{" "}
+          <a
+            href="https://www.instagram.com/artgoblin_3000/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline hover:text-white"
+          >
+            artgoblin_3000
+          </a>
+          . All rights reserved.
+        </p>
+      </footer>
+    </>
   );
 };
 
