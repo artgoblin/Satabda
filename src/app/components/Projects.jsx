@@ -65,83 +65,96 @@ const Projects = () => {
   ];
 
   return (
-    <>
-      <div className="container mx-auto px-6">
-        <div className="space-y-16">
-          <h1 className="text-5xl font-extrabold text-transparent mixing bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 mb-1 py-15">
-            Projects
-          </h1>
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className={`flex ${
-                project.align === "right" ? "justify-end" : "justify-start"
-              }`}
-            >
-              <Parallax
-                translateX={project.align === "right" ? [25, -5] : [-5, 25]}
-                scale={[1, 1.05]}
-                className="w-full"
-              >
-                <div
-                  className={`bg-gradient-to-br ${project.colorFrom} ${project.colorTo} p-8 rounded-xl border border-white/10 w-full max-w-4xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl curtain`}
-                >
-                  <div className="flex justify-between items-start mb-6">
-                    <h3 className={`text-3xl ${isDarkMode ? "text-white" : "text-zinc-700"} font-bold`}>{project.title}</h3>
-                    <span className="bg-black/30 px-3 py-1 rounded-full text-sm">
-                      {project.tag}
-                    </span>
-                  </div>
-
-                  <p
-                    className={`flex ${
-                      project.align === "right" ? "items-end" : "items-start"
-                    }`}
-                  >
-                    {project.description}
-                  </p>
-                  <div className={"flex justify-center mt-8"}>
-                    {project.technologies.map((tech, id) => {
-                      const Icon = tech;
-
-                        return (
-                        <Icon
-                          key={id}
-                          className={`text-4xl mx-2 ${isDarkMode ? "text-white" : "text-zinc-700"} hover:${isDarkMode ? "text-purple-500" : "text-white"} transition-colors duration-300`}
-                        />
-                        );
-                    })}
-                  </div>
-
-                  <div className="flex justify-center mt-8 gap-4">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-400 transition"
-                    >
-                      Git Hub
-                    </a>
-                  </div>
-                </div>
-              </Parallax>
-            </div>
-          ))}
-        </div>
-        <div className="justify-center flex">
-          <a
-            className="p-4 mt-16 bg-gradient-to-r from-blue-500/80 to-green-500/80 text-white-800 hover:scale-[1.05] rounded-full font-medium hover:bg-blue-900 transition-all hover:text-black transition duration-300 flex items-center gap-2"
-            href={"https://github.com/artgoblin"}
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="container mx-auto px-4 sm:px-6 py-8">
+      <div className="space-y-8 md:space-y-16">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent mixing bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 mb-1 py-4 sm:py-8">
+          Projects
+        </h1>
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className={`flex ${
+              project.align === "right" ? "justify-end" : "justify-start"
+            }`}
           >
-            <FaGithub />
-            <span>Learn More</span>
-          </a>
-        </div>
-          <Skills />
+            <Parallax
+              translateX={
+                window.innerWidth > 100
+                  ? project.align === "right"
+                    ? [25, -5]
+                    : [-5, 25]
+                  : [0, 0]
+              }
+              scale={[1, window.innerWidth > 768 ? 1.05 : 1]}
+              className="w-full"
+            >
+              <div
+                className={`bg-gradient-to-br ${project.colorFrom} ${project.colorTo} p-6 sm:p-8 rounded-xl border border-white/10 w-full max-w-4xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl curtain`}
+              >
+                <div className="flex flex-col sm:flex-row justify-between items-start mb-4 sm:mb-6 gap-2 sm:gap-0">
+                  <h3
+                    className={`text-2xl sm:text-3xl ${
+                      isDarkMode ? "text-white" : "text-zinc-700"
+                    } font-bold`}
+                  >
+                    {project.title}
+                  </h3>
+                  <span className="bg-black/30 px-3 py-1 rounded-full text-xs sm:text-sm">
+                    {project.tag}
+                  </span>
+                </div>
+
+                <p
+                  className={`text-sm sm:text-base ${
+                    isDarkMode ? "text-gray-200" : "text-zinc-600"
+                  } mb-4 sm:mb-6`}
+                >
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-6 sm:mt-8">
+                  {project.technologies.map((tech, id) => {
+                    const Icon = tech;
+                    return (
+                      <Icon
+                        key={id}
+                        className={`text-3xl sm:text-4xl ${
+                          isDarkMode
+                            ? "text-white hover:text-purple-400"
+                            : "text-zinc-700 hover:text-white"
+                        } transition-colors duration-300`}
+                      />
+                    );
+                  })}
+                </div>
+
+                <div className="flex justify-center mt-6 sm:mt-8 gap-4">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white text-black px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-bold hover:bg-gray-400 transition text-sm sm:text-base"
+                  >
+                    Git Hub
+                  </a>
+                </div>
+              </div>
+            </Parallax>
+          </div>
+        ))}
       </div>
-    </>
+      <div className="flex justify-center">
+        <a
+          className="p-3 sm:p-4 mt-8 sm:mt-16 bg-gradient-to-r from-blue-500/80 to-green-500/80 text-white-800 hover:scale-[1.05] rounded-full font-medium hover:bg-blue-900 transition-all hover:text-black transition duration-300 flex items-center gap-2 text-sm sm:text-base"
+          href={"https://github.com/artgoblin"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
+          <span>Learn More</span>
+        </a>
+      </div>
+      <Skills />
+    </div>
   );
 };
 
