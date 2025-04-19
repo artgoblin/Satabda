@@ -165,7 +165,7 @@ const Experience = () => {
                 Developed and test b2c web application using react and python.
               </li>
               <li>
-                integrated Machine learning with the application which helps to notify
+                Integrated Machine learning with the application which helps to notify
                 customers about their upcoming payment due dates and also helps to pay
                 the bills.
               </li>
