@@ -46,7 +46,9 @@ const Footer = () => {
   return (
     <>
       <button
-        className={`fixed bottom-20 mixing bg-gradient-to-r from-blue-500 to-green-500 right-1/2 translate-x-1/2 mb-85 z-70 ${isDarkMode ? "text-white" : "text-black"} p-2 rounded-full text-2xl hover:scale-110 transition`}
+        className={`fixed bottom-20 mixing bg-gradient-to-r from-blue-500 to-green-500  md:right-1/2 md:translate-x-1/2 right-1/2 translate-x-1/2 mb-85 z-70 ${
+          isDarkMode ? "text-white" : "text-black"
+        } p-2 rounded-full text-2xl hover:scale-110 transition`}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
         <CiSquareChevUp />
@@ -81,13 +83,12 @@ const Footer = () => {
           Contact Me
         </button>
         <p className="text-1xl text-red-300/60">
-          <strong>Factinator:</strong>
+          <strong>Factinator</strong>
         </p>
-        <div
-          className="flex justify-center items-center p-10"
-          style={{ maxHeight: "100px", overflowY: "auto" }}
-        >
-          <p className="text-lg italic mt-2 text-purple-300">{fact}</p>
+        <div className="flex justify-center items-center p-10 max-h-[100px] overflow-visible">
+          <p className="text-lg italic mt-2 text-purple-300 max-w-[600px] text-center max-h-[100px] scrollbar-thin scrollbar-thumb-purple-400 scrollbar-track-transparent overflow-y-auto">
+            {fact}
+          </p>
         </div>
         <button
           onClick={fetchFact}

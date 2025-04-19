@@ -32,7 +32,7 @@ const ContactForm = () => {
   };
   
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+    <div className="w-70 sm:w-70 md-w-90 lg:w-120  inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
       <div className="w-full max-w-md mx-4 bg-white rounded-lg shadow-xl overflow-hidden">
         <div className="flex justify-between items-center p-4 sm:p-6 border-b">
           <h1 className="text-xl sm:text-2xl font-bold text-gray-800">Contact Me</h1>
