@@ -101,7 +101,7 @@ const Experience = () => {
                     className={`relative rounded-full cursor-pointer p-1 mr-2 ${isDarkMode ? "text-white" : "text-black"} border-1 border-transparent hover:border-pink-500 hover:shadow-[0_0_1px_1px] hover:shadow-pink-500 transition-all duration-300`}
                     onClick={() =>
                       window.open(
-                        "https://www.linkedin.com/in/satabda-das-29620a190/overlay/1635536886811/single-media-viewer/?profileId=ACoAACzhnRIBbNIsMosRsOZSpYLYOYAtFoDo-gQ",
+                        "/cognizant.pdf",
                         "_blank"
                       )
                     }
@@ -148,7 +148,7 @@ const Experience = () => {
                     className={`relative rounded-full cursor-pointer p-1 mr-2 ${isDarkMode ? "text-white" : "text-black"} border-1 border-transparent hover:border-pink-500 hover:shadow-[0_0_1px_1px] hover:shadow-pink-500 transition-all duration-300`}
                     onClick={() =>
                       window.open(
-                        "https://www.linkedin.com/in/satabda-das-29620a190/overlay/1635505446954/single-media-viewer/?profileId=ACoAACzhnRIBbNIsMosRsOZSpYLYOYAtFoDo-gQ",
+                        "/highradius.pdf",
                         "_blank"
                       )
                     }
@@ -191,7 +191,7 @@ const Experience = () => {
                     className={`relative rounded-full cursor-pointer p-1 mr-2 ${isDarkMode ? "text-white" : "text-black"} border-1 border-transparent hover:border-pink-500 hover:shadow-[0_0_1px_1px] hover:shadow-pink-500 transition-all duration-300`}
                     onClick={() =>
                       window.open(
-                        "https://www.linkedin.com/in/satabda-das-29620a190/overlay/1635472059526/single-media-viewer/?profileId=ACoAACzhnRIBbNIsMosRsOZSpYLYOYAtFoDo-gQ",
+                        "pearlthought.pdf",
                         "_blank"
                       )
                     }
