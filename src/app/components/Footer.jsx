@@ -85,7 +85,7 @@ const Footer = () => {
         </p>
         <div
           className="flex justify-center items-center p-10"
-          style={{ maxHeight: "200px", overflowY: "hidden" }}
+          style={{ maxHeight: "100px", overflowY: "auto" }}
         >
           <p className="text-lg italic mt-2 text-purple-300">{fact}</p>
         </div>
