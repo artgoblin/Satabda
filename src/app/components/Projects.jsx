@@ -78,14 +78,8 @@ const Projects = () => {
             }`}
           >
             <Parallax
-              translateX={
-                window.innerWidth > 100
-                  ? project.align === "right"
-                    ? [25, -5]
-                    : [-5, 25]
-                  : [0, 0]
-              }
-              scale={[1, window.innerWidth > 768 ? 1.05 : 1]}
+              translateX={project.align === "right" ? [25, -5] : [-5, 25]}
+              scale={[1, 1.05]}
               className="w-full"
             >
               <div
@@ -132,7 +126,7 @@ const Projects = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white text-black px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-bold hover:bg-gray-400 transition text-sm sm:text-base"
+                    className="bg-white text-black px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-bold hover:bg-gray-600 transition text-sm sm:text-base"
                   >
                     Git Hub
                   </a>
