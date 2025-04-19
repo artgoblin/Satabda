@@ -1,9 +1,12 @@
 import { TextLoop } from "@/components/motion-primitives/text-loop";
 import { Magnetic } from '@/components/motion-primitives/magnetic';
+import { useSelector } from "react-redux";
 
 import "../../../src/app/globals.css";
 
 const LandingPanel = () => {
+    const theme = useSelector((state) => state.theme.color);
+    const isDarkMode = theme === "dark";
   const texts = [
     "Full-Stack Developer",
     "Web Developer",
@@ -20,14 +23,14 @@ const LandingPanel = () => {
 
   return (
     <>
-      <h1 className="z-10 text-5xl md:text-7xl font-extrabold leading-tight tracking-wide">
+      <h1 className={`z-10 text-5xl md:text-7xl  ${isDarkMode ? "text-white" : "text-black"} font-extrabold leading-tight tracking-wide`}>
         Hi, I'm{" "}
         <span className="text-red-500 drop-shadow-[0_0_10px_rgba(255,0,0,0.6)]">
           Satabda
         </span>
       </h1>
 
-      <div className="z-10 text-2xl md:text-4xl mt-4 font-medium inline-flex">
+      <div className={`z-10 text-2xl md:text-4xl mt-4 ${isDarkMode ? "text-white" : "text-black"} font-medium inline-flex`}>
         I'm a&nbsp;
         <TextLoop
           className="overflow-y-clip"

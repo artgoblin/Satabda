@@ -1,7 +1,11 @@
 import { AnimatedBackground } from "@/components/motion-primitives/animated-background";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
+
 
 const Navbar = () => {
+  const theme = useSelector((state) => state.theme.color);
+  const isDarkMode = theme === "dark";
   const TABS = ["Home", "About", "Works", "Experience", "Contact"];
 
   const handleNavClick = (tab) => {
@@ -29,7 +33,7 @@ const Navbar = () => {
               key={index}
               data-id={tab}
               type="button"
-              className="px-2 text-sm md:px-8 md:py-4 md:text-base text-zinc-400 transition-colors duration-300 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-50"
+              className={`px-2 text-sm md:px-8 md:py-4 md:text-base ${isDarkMode ? "text-zinc-400" : "text-zinc-800"} transition-colors duration-300 hover:text-zinc-950 dark:hover:text-zinc-50`}
               onClick={() => handleNavClick(tab)}
             >
               {tab}

@@ -1,8 +1,11 @@
 import { CiLocationOn } from "react-icons/ci";
 import { FaGraduationCap } from "react-icons/fa";
+import { useSelector } from "react-redux";
 import "../../../src/app/globals.css";
 
 const About = () => {
+  const theme = useSelector((state) => state.theme.color);
+  const isDarkMode = theme === "dark";
   return (
     <div className="flex flex-col items-center min-h-screen py-20 px-4">
       <div className="w-full max-w-4xl">
@@ -10,8 +13,8 @@ const About = () => {
           About Me
         </h1>
 
-        <div className="text-white text-lg leading-loose space-y-6 p-8">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-lg font-medium text-center text-white/80 mb-10">
+        <div className={`${isDarkMode ? "text-white" : "text-black"} text-lg leading-loose space-y-6 p-8`}>
+        <div className={`flex flex-col md:flex-row justify-center items-center gap-6 text-lg font-medium text-center  ${isDarkMode ? "text-white" : "text-black"} mb-10`}>
           <div className="flex items-center gap-2">
             <CiLocationOn size={24} />
             <span>Kolkata, India</span>

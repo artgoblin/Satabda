@@ -5,8 +5,12 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { SiSpringboot, SiTwilio, SiMysql, SiFlask } from "react-icons/si";
 import Skills from "./Skills";
 import { FaGithub } from "react-icons/fa";
+import { useSelector } from "react-redux";
 import "../../../src/app/globals.css";
+
 const Projects = () => {
+  const theme = useSelector((state) => state.theme.color);
+  const isDarkMode = theme === "dark";
   const projects = [
     {
       title: "Restaurant Management System",
@@ -83,7 +87,7 @@ const Projects = () => {
                   className={`bg-gradient-to-br ${project.colorFrom} ${project.colorTo} p-8 rounded-xl border border-white/10 w-full max-w-4xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl curtain`}
                 >
                   <div className="flex justify-between items-start mb-6">
-                    <h3 className="text-3xl font-bold">{project.title}</h3>
+                    <h3 className={`text-3xl ${isDarkMode ? "text-white" : "text-zinc-700"} font-bold`}>{project.title}</h3>
                     <span className="bg-black/30 px-3 py-1 rounded-full text-sm">
                       {project.tag}
                     </span>
@@ -103,7 +107,7 @@ const Projects = () => {
                         return (
                         <Icon
                           key={id}
-                          className="text-4xl mx-2 text-white hover:text-purple-500 transition-colors duration-300"
+                          className={`text-4xl mx-2 ${isDarkMode ? "text-white" : "text-zinc-700"} hover:${isDarkMode ? "text-purple-500" : "text-white"} transition-colors duration-300`}
                         />
                         );
                     })}

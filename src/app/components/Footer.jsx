@@ -6,7 +6,7 @@ import { CiSquareChevUp } from "react-icons/ci";
 import { BsGithub } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
 import { TbBrandLeetcode } from "react-icons/tb";
-import { openModal, closeModal } from "../store/modalSlice";
+import { openModal } from "../store/modalSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const SocialLink = ({ href, Icon }) => (
@@ -21,7 +21,8 @@ const SocialLink = ({ href, Icon }) => (
 );
 
 const Footer = () => {
-  const open = useSelector((state) => state.modal.open);
+  const theme = useSelector((state) => state.theme.color);
+  const isDarkMode = theme === "dark";
   const dispatch = useDispatch();
   const [fact, setFact] = useState("");
 
@@ -45,7 +46,7 @@ const Footer = () => {
   return (
     <>
       <button
-        className="fixed bottom-20 mixing bg-purple-800 right-1/2 translate-x-1/2 mb-85 z-70 border border-red-300 text-white p-2 rounded-full text-2xl hover:bg-red-300/20 transition-colors"
+        className={`fixed bottom-20 mixing bg-gradient-to-r from-blue-500 to-green-500 right-1/2 translate-x-1/2 mb-85 z-70 ${isDarkMode ? "text-white" : "text-black"} p-2 rounded-full text-2xl hover:scale-110 transition`}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
         <CiSquareChevUp />

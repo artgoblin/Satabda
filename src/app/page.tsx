@@ -13,11 +13,13 @@ import SectionWrapper from "../app/SectionWrapper";
 import ContactForm from "../app/components/ContactForm";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { openModal, closeModal } from "./store/modalSlice";
+import { closeModal } from "./store/modalSlice";
+import { dark, light } from "./store/themeSlice";
 import { RootState } from "./store/store";
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const theme = useSelector((state: RootState) => state.theme.color);
+  const isDarkMode = theme === "dark";
   const open = useSelector((state: RootState) => state.modal.open);
   const modalRef = useRef<HTMLDivElement>(null);
   const dispatch = useDispatch();
@@ -58,7 +60,11 @@ export default function Home() {
     return () => window.removeEventListener("resize", generateBubbles);
   }, []);
   const HandleThemeChange = () => {
-    setIsDarkMode(!isDarkMode);
+    if (isDarkMode) {
+      dispatch(light());
+    } else {
+      dispatch(dark());
+    }
   };
   return (
     <>
@@ -102,10 +108,7 @@ export default function Home() {
             className="fixed inset-0 bg-black/80 backdrop-blur-md flex justify-center items-center z-50"
             onClick={handleOutsideClick}
           >
-            <div
-              ref={modalRef}
-              onClick={(e) => e.stopPropagation()}
-            >
+            <div ref={modalRef} onClick={(e) => e.stopPropagation()}>
               <ContactForm />
             </div>
           </div>
