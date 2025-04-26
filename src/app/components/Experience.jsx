@@ -283,7 +283,7 @@ const Experience = () => {
             >
               <li>Boiler plate code generation using react and Java.</li>
               <li>performance enhancement of the overall application.</li>
-              <li>Optimoization of the code base.</li>
+              <li>Optimization of the code base.</li>
             </ul>
           </AccordionContent>
         </AccordionItem>
