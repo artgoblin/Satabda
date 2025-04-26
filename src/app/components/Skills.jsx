@@ -9,6 +9,7 @@ import {
   FaHtml5,
 } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { TbBrandRedux } from "react-icons/tb";
 import { RiNextjsFill } from "react-icons/ri";
 import {
   SiSpringboot,
@@ -97,6 +98,10 @@ const Skills = () => {
       <FaHtml5
         className="text-5xl text-[#e34f26] hover:scale-110 transition"
         title="HTML5"
+      />
+      <TbBrandRedux
+        className="text-5xl text-[#e34f26] hover:scale-110 transition"
+        title="Redux"
       />
     </InfiniteSlider>
   );
