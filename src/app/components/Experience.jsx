@@ -33,7 +33,7 @@ const Experience = () => {
         }}
       >
        {/* Cloudium Software */}
-        <AccordionItem value="ibs-software" className="py-2">
+        <AccordionItem value="cloudium-software" className="py-2">
           <AccordionTrigger className="w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50">
             <div className="flex items-center">
               <ChevronRight
@@ -47,7 +47,7 @@ const Experience = () => {
                     isDarkMode ? "text-white" : "text-black"
                   }`}
                 >
-                  IBS Software
+                 Cloudium Software
                   <em
                     className={`text-sm ${
                       isDarkMode ? "text-zinc-300" : "text-zinc-800"
