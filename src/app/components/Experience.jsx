@@ -32,6 +32,80 @@ const Experience = () => {
           },
         }}
       >
+       {/* Cloudium Software */}
+        <AccordionItem value="ibs-software" className="py-2">
+          <AccordionTrigger className="w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50">
+            <div className="flex items-center">
+              <ChevronRight
+                className={`h-4 w-4 ${
+                  isDarkMode ? "text-white" : "text-black"
+                } transition-transform duration-200 group-data-expanded:rotate-90`}
+              />
+              <div className="flex items-center justify-between w-full">
+                <div
+                  className={`font-semibold text-lg ${
+                    isDarkMode ? "text-white" : "text-black"
+                  }`}
+                >
+                  IBS Software
+                  <em
+                    className={`text-sm ${
+                      isDarkMode ? "text-zinc-300" : "text-zinc-800"
+                    } px-3`}
+                  >
+                    (Full-Time Employee)
+                  </em>
+                </div>
+                <div
+                  className={`text-sm ${
+                    isDarkMode ? "text-zinc-300" : "text-zinc-800"
+                  } flex items-center space-x-4`}
+                >
+                  <em>Dec 2025 – Present</em>
+                  <a
+                    className={`relative rounded-full cursor-pointer p-1 mr-2 ${
+                      isDarkMode ? "text-white" : "text-black"
+                    } border-1 border-transparent hover:border-pink-500 hover:shadow-[0_0_1px_1px] hover:shadow-pink-500 transition-all duration-300`}
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/feed/update/urn:li:activity:7230129443753615361/",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <FaExternalLinkAlt className="h-4 w-4 mr-1" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent className="origin-left">
+            <ul
+              className={`pl-6 pr-2 ${
+                isDarkMode ? "text-zinc-300" : "text-zinc-800"
+              } list-disc space-y-2`}
+            >
+              <li>
+                Developed and deployed 10+ features for an airline SaaS
+                platform, reducing bugs by 15% through rigorous testing and
+                debugging.
+              </li>
+              <li>
+                Collaborated with cross-functional teams to align development
+                with business goals, accelerating delivery timelines.
+              </li>
+              <li>
+                Mentored junior developers, improving code quality and team
+                productivity.
+              </li>
+              <li>
+                🏆 Awarded the <strong>"Debutant Award"</strong> for outstanding
+                performance and key milestone achievements.
+              </li>
+            </ul>
+          </AccordionContent>
+        </AccordionItem>
+        
         {/* IBS Software */}
         <AccordionItem value="ibs-software" className="py-2">
           <AccordionTrigger className="w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50">
@@ -61,7 +135,7 @@ const Experience = () => {
                     isDarkMode ? "text-zinc-300" : "text-zinc-800"
                   } flex items-center space-x-4`}
                 >
-                  <em>Jun 2023 – Present</em>
+                  <em>Jun 2023 – Dec 2025</em>
                   <a
                     className={`relative rounded-full cursor-pointer p-1 mr-2 ${
                       isDarkMode ? "text-white" : "text-black"
