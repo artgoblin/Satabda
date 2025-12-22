@@ -191,7 +191,7 @@ const Skills = () => {
           title="Kafka"
           onMouseEnter={() => {
             iconValue.current = {
-              title: "React.js",
+              title: "Kafka",
               strength: 80,
               experience: 3,
             };
