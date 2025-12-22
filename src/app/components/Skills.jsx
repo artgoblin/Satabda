@@ -125,8 +125,8 @@ const Skills = () => {
             setIsPopUpOpen(true);
             iconValue.current = {
               title: "Flask",
-              strength: 1,
-              experience: 3,
+              strength: 60,
+              experience: 1,
             };
           }}
           onMouseLeave={() => {
@@ -486,7 +486,7 @@ const Skills = () => {
           title="Kafka"
           onMouseEnter={() => {
             iconValue.current = {
-              title: "React.js",
+              title: "Kafka",
               strength: 80,
               experience: 3,
             };
@@ -715,8 +715,8 @@ const Skills = () => {
             setIsPopUpOpen(true);
             iconValue.current = {
               title: "Flask",
-              strength: 1,
-              experience: 3,
+              strength: 60,
+              experience: 1,
             };
           }}
           onMouseLeave={() => {
@@ -781,7 +781,7 @@ const Skills = () => {
           title="Kafka"
           onMouseEnter={() => {
             iconValue.current = {
-              title: "React.js",
+              title: "Kafka",
               strength: 80,
               experience: 3,
             };
@@ -1010,8 +1010,8 @@ const Skills = () => {
             setIsPopUpOpen(true);
             iconValue.current = {
               title: "Flask",
-              strength: 1,
-              experience: 3,
+              strength: 60,
+              experience: 1,
             };
           }}
           onMouseLeave={() => {
@@ -1076,7 +1076,7 @@ const Skills = () => {
           title="Kafka"
           onMouseEnter={() => {
             iconValue.current = {
-              title: "React.js",
+              title: "Kafka",
               strength: 80,
               experience: 3,
             };
@@ -1305,8 +1305,8 @@ const Skills = () => {
             setIsPopUpOpen(true);
             iconValue.current = {
               title: "Flask",
-              strength: 1,
-              experience: 3,
+              strength: 60,
+              experience: 1,
             };
           }}
           onMouseLeave={() => {
@@ -1371,7 +1371,7 @@ const Skills = () => {
           title="Kafka"
           onMouseEnter={() => {
             iconValue.current = {
-              title: "React.js",
+              title: "Kafka",
               strength: 80,
               experience: 3,
             };
@@ -1600,8 +1600,8 @@ const Skills = () => {
             setIsPopUpOpen(true);
             iconValue.current = {
               title: "Flask",
-              strength: 1,
-              experience: 3,
+              strength: 60,
+              experience: 1,
             };
           }}
           onMouseLeave={() => {
@@ -1666,7 +1666,7 @@ const Skills = () => {
           title="Kafka"
           onMouseEnter={() => {
             iconValue.current = {
-              title: "React.js",
+              title: "Kafka",
               strength: 80,
               experience: 3,
             };
