@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "./store/modalSlice";
 import { dark, light } from "./store/themeSlice";
 import { RootState } from "./store/store";
+import Skills from "./components/Skills";
 
 export default function Home() {
   const theme = useSelector((state: RootState) => state.theme.color);
@@ -96,6 +97,9 @@ export default function Home() {
           </SectionWrapper>
           <SectionWrapper id="works">
             <Projects />
+          </SectionWrapper>
+          <SectionWrapper id="works">
+            <Skills />
           </SectionWrapper>
           <SectionWrapper id="experience">
             <Experience />

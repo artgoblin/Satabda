@@ -67,7 +67,7 @@ const Projects = () => {
   return (
     <div className="container mx-auto px-4 sm:px-6 py-8">
       <div className="space-y-8 md:space-y-16">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent mixing bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 mb-1 py-4 sm:py-8">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent mixing bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 mb-17 py-4 sm:py-8">
           Projects
         </h1>
         {projects.map((project, index) => (
@@ -136,7 +136,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-20">
         <a
           className="p-3 sm:p-4 mt-8 sm:mt-16 bg-gradient-to-r from-blue-500/80 to-green-500/80 text-white-800 hover:scale-[1.05] rounded-full font-medium hover:bg-blue-900 transition-all hover:text-black transition duration-300 flex items-center gap-2 text-sm sm:text-base"
           href={"https://github.com/artgoblin"}
@@ -147,7 +147,6 @@ const Projects = () => {
           <span>Learn More</span>
         </a>
       </div>
-      <Skills />
     </div>
   );
 };

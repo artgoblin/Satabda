@@ -41,7 +41,7 @@ const Experience = () => {
                   isDarkMode ? "text-white" : "text-black"
                 } transition-transform duration-200 group-data-expanded:rotate-90`}
               />
-              <div className="flex items-center justify-between w-full">
+              <div className="flex ml-2 items-center justify-between w-full">
                 <div
                   className={`font-semibold text-lg ${
                     isDarkMode ? "text-white" : "text-black"
@@ -86,21 +86,7 @@ const Experience = () => {
               } list-disc space-y-2`}
             >
               <li>
-                Developed and deployed 10+ features for an airline SaaS
-                platform, reducing bugs by 15% through rigorous testing and
-                debugging.
-              </li>
-              <li>
-                Collaborated with cross-functional teams to align development
-                with business goals, accelerating delivery timelines.
-              </li>
-              <li>
-                Mentored junior developers, improving code quality and team
-                productivity.
-              </li>
-              <li>
-                🏆 Awarded the <strong>"Debutant Award"</strong> for outstanding
-                performance and key milestone achievements.
+                Just Joined
               </li>
             </ul>
           </AccordionContent>
@@ -115,13 +101,13 @@ const Experience = () => {
                   isDarkMode ? "text-white" : "text-black"
                 } transition-transform duration-200 group-data-expanded:rotate-90`}
               />
-              <div className="flex items-center justify-between w-full">
+              <div className="flex ml-2 items-center justify-between w-full">
                 <div
                   className={`font-semibold text-lg ${
                     isDarkMode ? "text-white" : "text-black"
                   }`}
                 >
-                  IBS Software
+                   IBS Software
                   <em
                     className={`text-sm ${
                       isDarkMode ? "text-zinc-300" : "text-zinc-800"
