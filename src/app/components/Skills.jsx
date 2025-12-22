@@ -420,8 +420,8 @@ const Skills = () => {
             setIsPopUpOpen(true);
             iconValue.current = {
               title: "Flask",
-              strength: 1,
-              experience: 3,
+              strength: 60,
+              experience: 1,
             };
           }}
           onMouseLeave={() => {
