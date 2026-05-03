@@ -24,7 +24,7 @@ const Projects = () => {
       link: "https://github.com/artgoblin/dbsightbackend",
     },
     {
-      title: "Restaurant Management System",
+      title: "Dine Out",
       tag: "Full-stack App",
       description:
         "Developed a web-based system to streamline restaurant operations, reducing order processing time by 30%. Integrated user-friendly interfaces with robust backend services, ensuring seamless user experience and reliable data handling.",
