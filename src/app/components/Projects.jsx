@@ -21,7 +21,7 @@ const Projects = () => {
       colorFrom: "from-indigo-900/50",
       colorTo: "to-cyan-900/50",
       align: "left",
-      link: "https://github.com/artgoblin/dbSight",
+      link: "https://github.com/artgoblin/dbsightbackend",
     },
     {
       title: "Restaurant Management System",
