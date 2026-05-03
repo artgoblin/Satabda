@@ -42,20 +42,16 @@ const Navbar = () => {
         </AnimatedBackground>
         <div className="flex-grow" />
         <div>
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{
-              repeat: Infinity,
-              duration: 3,
-              ease: "linear",
-            }}
+          <div
+
+            title="Resume"
             onClick={() => {
                window.open("/Resume.pdf", "_blank");}
             }
             className="hover:scale-[1.05] cursor-pointer p-1"
           >
             <img src="/favicon.ico" alt="Logo" className="w-10 h-10" />
-          </motion.div>
+          </div>
         </div>
       </div>
     </>
