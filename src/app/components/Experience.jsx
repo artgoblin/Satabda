@@ -32,7 +32,7 @@ const Experience = () => {
           },
         }}
       >
-       {/* Cloudium Software */}
+        {/* Cloudium Software */}
         <AccordionItem value="cloudium-software" className="py-2">
           <AccordionTrigger className="w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50">
             <div className="flex items-center">
@@ -47,7 +47,7 @@ const Experience = () => {
                     isDarkMode ? "text-white" : "text-black"
                   }`}
                 >
-                 Cloudium Software
+                  Cloudium Software
                   <em
                     className={`text-sm ${
                       isDarkMode ? "text-zinc-300" : "text-zinc-800"
@@ -61,17 +61,11 @@ const Experience = () => {
                     isDarkMode ? "text-zinc-300" : "text-zinc-800"
                   } flex items-center space-x-4`}
                 >
-                  <em>Dec 2025 – Present</em>
+                  <em>Dec 2024 – Present</em>
                   <a
-                    className={`relative rounded-full cursor-pointer p-1 mr-2 ${
-                      isDarkMode ? "text-white" : "text-black"
-                    } border-1 border-transparent hover:border-pink-500 hover:shadow-[0_0_1px_1px] hover:shadow-pink-500 transition-all duration-300`}
-                    onClick={() =>
-                      window.open(
-                        "https://www.linkedin.com/feed/update/urn:li:activity:7230129443753615361/",
-                        "_blank"
-                      )
-                    }
+                    className={`relative rounded-full cursor-pointer p-1 mr-2 text-gray-600 border-1 border-transparent hover:border-pink-500 hover:shadow-[0_0_1px_1px] hover:shadow-pink-500 transition-all duration-300`}
+                    onClick={() => {}}
+                    title="Coming Soon"
                   >
                     <FaExternalLinkAlt className="h-4 w-4 mr-1" />
                   </a>
@@ -86,12 +80,19 @@ const Experience = () => {
               } list-disc space-y-2`}
             >
               <li>
-                Just Joined
+                Developing backend features and resolved 15+ production bugs for
+                Equip Healthcare using Java, Micronaut, and PostgreSQL, reducing
+                incidents by 30% and improving system stability by 25%.
+              </li>
+              <li>
+                Building AI integration features using LLM APIs, implementing
+                intelligent automation workflows to enhance healthcare data
+                processing and clinical decision support systems.
               </li>
             </ul>
           </AccordionContent>
         </AccordionItem>
-        
+
         {/* IBS Software */}
         <AccordionItem value="ibs-software" className="py-2">
           <AccordionTrigger className="w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50">
@@ -107,7 +108,7 @@ const Experience = () => {
                     isDarkMode ? "text-white" : "text-black"
                   }`}
                 >
-                   IBS Software
+                  IBS Software
                   <em
                     className={`text-sm ${
                       isDarkMode ? "text-zinc-300" : "text-zinc-800"
@@ -121,7 +122,7 @@ const Experience = () => {
                     isDarkMode ? "text-zinc-300" : "text-zinc-800"
                   } flex items-center space-x-4`}
                 >
-                  <em>Jun 2023 – Dec 2025</em>
+                  <em>Jun 2023 – Dec 2024</em>
                   <a
                     className={`relative rounded-full cursor-pointer p-1 mr-2 ${
                       isDarkMode ? "text-white" : "text-black"
@@ -129,9 +130,10 @@ const Experience = () => {
                     onClick={() =>
                       window.open(
                         "https://www.linkedin.com/feed/update/urn:li:activity:7230129443753615361/",
-                        "_blank"
+                        "_blank",
                       )
                     }
+                    title="Achievements"
                   >
                     <FaExternalLinkAlt className="h-4 w-4 mr-1" />
                   </a>
@@ -146,17 +148,14 @@ const Experience = () => {
               } list-disc space-y-2`}
             >
               <li>
-                Developed and deployed 10+ features for an airline SaaS
-                platform, reducing bugs by 15% through rigorous testing and
-                debugging.
+                Implemented 15+ full-stack features for ICargo using Java,
+                Spring Boot, and GraphQL, reducing production incidents by 20%
+                and improving performance by 18% for 10,000+ users.
               </li>
               <li>
-                Collaborated with cross-functional teams to align development
-                with business goals, accelerating delivery timelines.
-              </li>
-              <li>
-                Mentored junior developers, improving code quality and team
-                productivity.
+                Maintained CI/CD pipelines in Jenkins, integrated SonarQube for
+                code quality analysis, and accelerated deployment by 20% with
+                90%+ test coverage using JUnit and Mockito.
               </li>
               <li>
                 🏆 Awarded the <strong>"Debutant Award"</strong> for outstanding
@@ -202,6 +201,7 @@ const Experience = () => {
                       isDarkMode ? "text-white" : "text-black"
                     } border-1 border-transparent hover:border-pink-500 hover:shadow-[0_0_1px_1px] hover:shadow-pink-500 transition-all duration-300`}
                     onClick={() => window.open("/cognizant.pdf", "_blank")}
+                    title="Achievements"
                   >
                     <FaExternalLinkAlt className="h-4 w-4 mr-1" />
                   </a>
@@ -267,6 +267,7 @@ const Experience = () => {
                       isDarkMode ? "text-white" : "text-black"
                     } border-1 border-transparent hover:border-pink-500 hover:shadow-[0_0_1px_1px] hover:shadow-pink-500 transition-all duration-300`}
                     onClick={() => window.open("/highradius.pdf", "_blank")}
+                    title="Achievements"
                   >
                     <FaExternalLinkAlt className="h-4 w-4 mr-1" />
                   </a>
@@ -284,9 +285,9 @@ const Experience = () => {
                 Developed and test b2c web application using react and python.
               </li>
               <li>
-                Integrated Machine learning with the application which helps to notify
-                customers about their upcoming payment due dates and also helps to pay
-                the bills.
+                Integrated Machine learning with the application which helps to
+                notify customers about their upcoming payment due dates and also
+                helps to pay the bills.
               </li>
               <li>Tuned indexes and queries to enhance system performance.</li>
             </ul>
@@ -328,6 +329,7 @@ const Experience = () => {
                       isDarkMode ? "text-white" : "text-black"
                     } border-1 border-transparent hover:border-pink-500 hover:shadow-[0_0_1px_1px] hover:shadow-pink-500 transition-all duration-300`}
                     onClick={() => window.open("pearlthought.pdf", "_blank")}
+                    title="Achievements"
                   >
                     <FaExternalLinkAlt className="h-4 w-4 mr-1" />
                   </a>

@@ -1,8 +1,8 @@
 import { Parallax } from "react-scroll-parallax";
 import { FaJava, FaPython, FaReact } from "react-icons/fa6";
-import { FaGitSquare } from "react-icons/fa";
+import { FaGitSquare, FaDocker } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { SiSpringboot, SiTwilio, SiMysql, SiFlask } from "react-icons/si";
+import { SiSpringboot, SiTwilio, SiMysql, SiFlask, SiLangchain, SiRedis } from "react-icons/si";
 import Skills from "./Skills";
 import { FaGithub } from "react-icons/fa";
 import { useSelector } from "react-redux";
@@ -13,6 +13,17 @@ const Projects = () => {
   const isDarkMode = theme === "dark";
   const projects = [
     {
+      title: "dbSight - AI-Powered NL to SQL Platform",
+      tag: "AI / Microservices",
+      description:
+        "Built an AI-powered Natural Language to SQL platform using Spring Boot 4.0 and LangChain4j with RAG-based semantic search. Architected microservices application with Docker, Redis caching, pgvector embeddings, Ollama LLM inference, and multi-tenant connections.",
+      technologies: [SiSpringboot, SiLangchain, FaDocker, BiLogoPostgresql, SiRedis],
+      colorFrom: "from-indigo-900/50",
+      colorTo: "to-cyan-900/50",
+      align: "left",
+      link: "https://github.com/artgoblin/dbSight",
+    },
+    {
       title: "Restaurant Management System",
       tag: "Full-stack App",
       description:
@@ -20,7 +31,7 @@ const Projects = () => {
       technologies: [SiSpringboot, FaReact, SiMysql, FaGitSquare],
       colorFrom: "from-blue-900/50",
       colorTo: "to-emerald-900/50",
-      align: "left",
+      align: "right",
       link: "https://github.com/artgoblin/restaurant_managment_system_front_end",
     },
     {
@@ -31,7 +42,7 @@ const Projects = () => {
       technologies: [FaPython, SiFlask, SiTwilio, FaGitSquare],
       colorFrom: "from-purple-900/50",
       colorTo: "to-red-900/50",
-      align: "right",
+      align: "left",
       link: "https://github.com/artgoblin/botwhatsapp",
     },
     {
@@ -48,7 +59,7 @@ const Projects = () => {
       ],
       colorFrom: "from-yellow-900/50",
       colorTo: "to-pink-900/50",
-      align: "left",
+      align: "right",
       link: "https://github.com/artgoblin/blogging_site",
     },
     {
@@ -59,7 +70,7 @@ const Projects = () => {
       technologies: [FaPython, FaGitSquare],
       colorFrom: "from-green-900/50",
       colorTo: "to-blue-900/50",
-      align: "right",
+      align: "left",
       link: "https://github.com/artgoblin/Voice-assisted-emotion-based-musicplayer",
     },
   ];
