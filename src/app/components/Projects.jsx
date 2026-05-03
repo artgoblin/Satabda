@@ -13,7 +13,7 @@ const Projects = () => {
   const isDarkMode = theme === "dark";
   const projects = [
     {
-      title: "dbSight - AI-Powered NL to SQL Platform",
+      title: "DBSight - AI-Powered NL to SQL Platform",
       tag: "AI / Microservices",
       description:
         "Built an AI-powered Natural Language to SQL platform using Spring Boot 4.0 and LangChain4j with RAG-based semantic search. Architected microservices application with Docker, Redis caching, pgvector embeddings, Ollama LLM inference, and multi-tenant connections.",
@@ -24,7 +24,7 @@ const Projects = () => {
       link: "https://github.com/artgoblin/dbsightbackend",
     },
     {
-      title: "Dine Out",
+      title: "DineOut",
       tag: "Full-stack App",
       description:
         "Developed a web-based system to streamline restaurant operations, reducing order processing time by 30%. Integrated user-friendly interfaces with robust backend services, ensuring seamless user experience and reliable data handling.",
